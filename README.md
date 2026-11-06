@@ -2,9 +2,9 @@
 ![DC-Laboratory](banner‑dc‑lab.png)
 > Proyecto de taller digital con recorrido interactivo 360°
 > Tres áreas principales:
-> 🔧 DC‑LAB · Tecnología y redes
-> 🏎️ ROJO TUNING · Taller automotriz
-> 🏭 S.I.D.C. · Soluciones industriales
+> 🔧 DC‑LAB· Tecnología y redes
+> 🏎️ ROJO TUNING· Taller automotriz
+> 🏭 S.I.D.C.· Soluciones industriales
 
 ---
 
