@@ -1,10 +1,21 @@
-# Taller 3D interactivo
+# 🛠️ DC‑LABORATORY
+![Banner DC‑LABORATORY](https://raw.githubusercontent.com/dcg0/DC‑laboratory/main/banner‑dc‑lab.png)
 
-Sitio estático con la experiencia interactiva de DC-LABORATORY, ROJO TUNING y S.I.D.C.
+> Proyecto de taller digital con recorrido interactivo 360°
+> Tres áreas principales:
+> 🔧 DC‑LAB · Tecnología y redes
+> 🏎️ ROJO TUNING · Taller automotriz
+> 🏭 S.I.D.C. · Soluciones industriales
 
-- `index.html`: entrada del sitio.
-- `taller.html`: versión completa del taller.
-- `iconos.png`, `lucy.png`, `bocho.jpg`: recursos fuente del proyecto.
-- `taller_interactivo_final.zip`: paquete descargable con el HTML y recursos incluidos.
+---
 
-Los enlaces y datos de productos que aparecen en la experiencia proceden del repositorio DC-laboratory. Este repositorio solo contiene una copia del sitio y sus recursos; no modifica el repositorio fuente.
+## 📌 ¿Qué incluye este repositorio?
+✅ Sitio web con recorrido 3D por todo el complejo
+✅ Configuración base para IA híbrida Lucy (cambia entre proveedor de nube y modo local sin internet)
+✅ Scripts para personalizar DC‑Linux (tu sistema operativo propio)
+✅ Diseños y recursos gráficos del proyecto
+
+## 🚀 Instalación rápida
+```bash
+git clone https://github.com/dcg0/DC‑laboratory.git
+cd DC‑laboratory
