@@ -1,7 +1,6 @@
 # 🛠️ DC‑LABORATORY
 ![DC-Laboratory](banner‑dc‑lab.png)
-> Proyecto de taller digital con recorrido interact 360
-> áreas:
+>  Taller áreas:
 > 🌐DC‑LAB· Tecnología y redes
 > 🏎️ROJO TUNING· Taller automotriz
 > ⚪S.I.D.C.· Soluciones industriales
