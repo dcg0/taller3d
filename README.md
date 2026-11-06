@@ -1,5 +1,5 @@
 # 🛠️ DC‑LABORATORY
-![Banner DC‑LABORATORY](https://raw.githubusercontent.com/dcg0/DC‑laboratory/main/banner‑dc‑lab.png)
+![Banner principal DC‑LABORATORY](https://raw.githubusercontent.com/dcg0/taller3d/main/banner‑dc‑lab.png)
 
 > Proyecto de taller digital con recorrido interactivo 360°
 > Tres áreas principales:
@@ -17,5 +17,5 @@
 
 ## 🚀 Instalación rápida
 ```bash
-git clone https://github.com/dcg0/DC‑laboratory.git
-cd DC‑laboratory
+git clone https://github.com/dcg0/taller3d.git
+cd taller3d
