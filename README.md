@@ -1,6 +1,5 @@
 # 🛠️ DC‑LABORATORY
 ![DC-Laboratory](banner‑dc‑lab.png)
->  Taller áreas:
 > 🌐DC‑LAB· Tecnología y redes
 > 🏎️ROJO TUNING· Taller automotriz
 > ⚪S.I.D.C.· Soluciones industriales
