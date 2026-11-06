@@ -9,12 +9,6 @@
 
 ---
 
-## 📌 ¿Qué incluye este repositorio?
-✅ Sitio web con recorrido 3D por todo el complejo (`indice.html`, `taller.html`)
-✅ Configuración base para IA híbrida Lucy (cambia entre proveedor de nube y modo local sin internet)
-✅ Scripts para personalizar DC‑Linux (tu sistema operativo propio)
-✅ Logotipos y gráficos oficiales del proyecto
-
 ## 🚀 Para abrir el sitio
 Abre el archivo `indice.html` en tu navegador.
 
