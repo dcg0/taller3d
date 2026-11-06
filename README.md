@@ -18,11 +18,11 @@
 ## 🚀 Para abrir el sitio
 Abre el archivo `indice.html` en tu navegador.
 
-## 📂 Estructura de carpetas y archivos
+## 📂 Archivos principales
 - `indice.html` → Pantalla de bienvenida
 - `taller.html` → Recorrido interactivo 360°
 - `banner‑dc‑lab.png` → Banner principal
-- `ia‑lucy/` → Scripts de la asistente híbrida
+- `lucy.png` → Imagen de la asistente Lucy
 
 ---
 ⚠️ Nota: Los modelos grandes de IA no se guardan aquí, el script los descarga automáticamente en tu equipo Dell.
