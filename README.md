@@ -25,4 +25,4 @@ Abre el archivo `indice.html` en tu navegador.
 - `lucy.png` → Imagen de la asistente híbrida Lucy
 
 ---
-⚠️ Nota: Los modelos grandes de IA no se guardan aquí, el script los descarga automáticamente en tu equipo Dell.
+⚠️ Nota: Los modelos grandes de IA no se guardan aquí, el script los descarga automáticamente en tu equipo
