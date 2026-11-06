@@ -1,5 +1,5 @@
-# 🛠️ DC‑LABORATORY
-![Banner principal DC‑LABORATORY](https://raw.githubusercontent.com/dcg0/taller3d/main/Banner_principal%20DC‑LABORATORY.png)
+# 🛠️ LABORATORIO DC
+![Banner principal DC‑LABORATORY](banner-dc-lab.png)
 
 > Proyecto de taller digital con recorrido interactivo 360°
 > Tres áreas principales:
@@ -10,12 +10,19 @@
 ---
 
 ## 📌 ¿Qué incluye este repositorio?
-✅ Sitio web con recorrido 3D por todo el complejo
+✅ Sitio web con recorrido 3D por todo el complejo (`indice.html`, `taller.html`)
 ✅ Configuración base para IA híbrida Lucy (cambia entre proveedor de nube y modo local sin internet)
 ✅ Scripts para personalizar DC‑Linux (tu sistema operativo propio)
-✅ Diseños y recursos gráficos del proyecto
+✅ Logotipos y gráficos del proyecto
 
-## 🚀 Instalación rápida
-```bash
-git clone https://github.com/dcg0/taller3d.git
-cd taller3d
+## 🚀 Para abrir el sitio
+Abre el archivo `indice.html` en tu navegador.
+
+## 📂 Estructura de carpetas y archivos
+- `indice.html` → Pantalla de bienvenida
+- `taller.html` → Recorrido interactivo 360°
+- `banner‑dc‑lab.png` → Banner principal
+- `ia‑lucy/` → Scripts de la asistente híbrida
+
+---
+⚠️ Nota: Los modelos grandes de IA no se guardan aquí, el script los descarga automáticamente en tu equipo Dell.
