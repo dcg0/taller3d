@@ -1,5 +1,5 @@
 # 🛠️ DC‑LABORATORY
-![DC-Laboratory](banner.png)
+![DC-Laboratory](banner‑dc‑lab.png)
 > Proyecto de taller digital con recorrido interactivo 360°
 > Tres áreas principales:
 > 🔧 DC‑LAB · Tecnología y redes
