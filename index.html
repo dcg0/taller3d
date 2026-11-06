@@ -1763,21 +1763,22 @@ function applyWorkshopLightState(zone){const bright=workshopLightState[zone];glo
 function toggleAndRefreshWorkshopLight(zone){workshopLightState[zone]=!workshopLightState[zone];applyWorkshopLightState(zone);for(const obj of zoneInter[zone])if(obj.userData.lightswitchZone===zone)obj.userData.label='PALANCA DE LUZ · '+(workshopLightState[zone]?'APAGAR':'ENCENDER');}
 for(let zi=0;zi<3;zi++){const root=zones[zi],accent=DATA.zones[zi].accent,unit=new THREE.Group();
  /* Columna lateral visible desde la posición inicial; palanca y letrero quedan al frente. */
- const angle=Math.PI/6,cx=Math.sin(angle)*WALL_R*.96,cz=-Math.cos(angle)*WALL_R*.96;
- unit.position.set(cx-.22,1.10,cz+.34);unit.rotation.y=-angle+.10;root.add(unit);
+ const angle=11*Math.PI/6,cx=Math.sin(angle)*WALL_R*.96,cz=-Math.cos(angle)*WALL_R*.96;
+ unit.position.set(cx+.42,1.25,cz+.55);unit.rotation.y=-angle+.08;root.add(unit);
  const boxMat=new THREE.MeshStandardMaterial({color:0x343a42,roughness:.5,metalness:.62});
- const boxBody=new THREE.Mesh(new THREE.BoxGeometry(.54,.74,.24),boxMat);unit.add(boxBody);
- const bezel=new THREE.Mesh(new THREE.BoxGeometry(.47,.63,.045),new THREE.MeshBasicMaterial({color:accent}));bezel.position.z=.14;unit.add(bezel);
- const inset=new THREE.Mesh(new THREE.BoxGeometry(.39,.54,.06),new THREE.MeshStandardMaterial({color:0x13171b,roughness:.4,metalness:.45}));inset.position.z=.17;unit.add(inset);
+ const boxBody=new THREE.Mesh(new THREE.BoxGeometry(.90,1.05,.24),boxMat);unit.add(boxBody);
+ const bezel=new THREE.Mesh(new THREE.BoxGeometry(.82,.95,.045),new THREE.MeshBasicMaterial({color:0xffd45f}));bezel.position.z=.14;unit.add(bezel);
+ const inset=new THREE.Mesh(new THREE.BoxGeometry(.72,.84,.06),new THREE.MeshStandardMaterial({color:0x13171b,roughness:.4,metalness:.45}));inset.position.z=.17;unit.add(inset);
  const leverGroup=new THREE.Group();leverGroup.position.set(0,-.01,.24);unit.add(leverGroup);
  const leverBase=new THREE.Mesh(new THREE.CylinderGeometry(.085,.085,.045,16),new THREE.MeshStandardMaterial({color:0xa9afb5,metalness:.9,roughness:.2}));leverBase.rotation.x=Math.PI/2;leverGroup.add(leverBase);
  const lever=new THREE.Group();lever.position.set(0,0,.035);leverGroup.add(lever);
  const stem=new THREE.Mesh(new THREE.CylinderGeometry(.027,.035,.30,10),new THREE.MeshStandardMaterial({color:0xd7dce0,metalness:.94,roughness:.2}));stem.position.y=.12;lever.add(stem);
  const knob=new THREE.Mesh(new THREE.SphereGeometry(.085,14,10),new THREE.MeshStandardMaterial({color:0xe14b3f,roughness:.28,metalness:.42}));knob.position.y=.28;lever.add(knob);
  const lamp=new THREE.Mesh(new THREE.SphereGeometry(.055,12,8),new THREE.MeshStandardMaterial({color:0xffe39a,emissive:0x73420d,emissiveIntensity:1.35,roughness:.3}));lamp.position.set(-.14,.25,.21);unit.add(lamp);
- const lightText=new THREE.Sprite(new THREE.SpriteMaterial({map:tagTex('LUZ', '#fff2c5'),transparent:true,depthWrite:false,fog:false}));lightText.scale.set(.46,.17,1);lightText.position.set(0,.48,.22);unit.add(lightText);
- const frame=new THREE.Mesh(new THREE.BoxGeometry(.62,.82,.028),new THREE.MeshBasicMaterial({color:accent,transparent:true,opacity:.8}));frame.position.z=.13;unit.add(frame);
- const hotspot=new THREE.Mesh(new THREE.BoxGeometry(.66,.88,.34),new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false,side:THREE.DoubleSide}));hotspot.position.z=.05;unit.add(hotspot);hotspot.userData.lightswitchZone=zi;hotspot.userData.label='PALANCA DE LUZ · PULSA PARA '+(workshopLightState[zi]?'APAGAR':'ENCENDER');zoneInter[zi].push(hotspot);
+ const signPlate=new THREE.Mesh(new THREE.BoxGeometry(.62,.25,.06),new THREE.MeshStandardMaterial({color:0x17191c,emissive:0x302300,emissiveIntensity:.8,metalness:.35,roughness:.35}));signPlate.position.set(0,.67,.19);unit.add(signPlate);
+ const lightText=new THREE.Sprite(new THREE.SpriteMaterial({map:tagTex('LUZ', '#fff2c5'),transparent:true,depthWrite:false,fog:false}));lightText.scale.set(.48,.17,1);lightText.position.set(0,.67,.24);unit.add(lightText);
+ const frame=new THREE.Mesh(new THREE.BoxGeometry(.98,1.20,.028),new THREE.MeshBasicMaterial({color:0xffd45f,transparent:true,opacity:1}));frame.position.set(0,-.04,.13);unit.add(frame);
+ const hotspot=new THREE.Mesh(new THREE.BoxGeometry(1.06,1.32,.40),new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false,side:THREE.DoubleSide}));hotspot.position.z=.05;unit.add(hotspot);hotspot.userData.lightswitchZone=zi;hotspot.userData.label='PALANCA DE LUZ · PULSA PARA '+(workshopLightState[zi]?'APAGAR':'ENCENDER');zoneInter[zi].push(hotspot);
  workshopSwitches[zi]={unit,lever,lamp,boxMat};}
 function toggleWorkshopLight(zone){workshopLightState[zone]=!workshopLightState[zone];applyWorkshopLightState(zone);const hot=zoneInter[zone].find(o=>o.userData.lightswitchZone===zone);if(hot)hot.userData.label='PALANCA DE LUZ · PULSA PARA '+(workshopLightState[zone]?'APAGAR':'ENCENDER');}
 let activeDyn = zoneDyn[0];
