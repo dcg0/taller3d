@@ -1,10 +1,10 @@
 # 🛠️ DC‑LABORATORY
 ![DC-Laboratory](banner‑dc‑lab.png)
-> 🌐DC‑LAB· Tecnología y redes
+> 🌐DC‑LAB· Tecnología y redes📟
 
-> 🏎️ROJO TUNING· Taller automotriz
+> 🔴ROJO TUNING· Taller automotriz🚗
 
-> ⚪S.I.D.C.· Soluciones industriales
+> ⚪S.I.D.C.· Soluciones industriales🛫
 
 ---
 
