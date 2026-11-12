@@ -205,6 +205,9 @@ body.hide-native #scene{cursor:none!important}
 #terminal-apps{margin-left:auto;margin-right:12px;padding:5px 7px;border:1px solid rgba(24,237,114,.45);border-radius:3px;background:#07130b;color:#76ffad;font:700 8px var(--mono);letter-spacing:.08em;cursor:pointer}
 #sound-btn{position:fixed;z-index:74;top:max(16px,env(safe-area-inset-top));right:14px;bottom:auto;display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:rgba(5,8,12,.76);color:#ffe2b4;font:700 17px var(--mono);cursor:pointer;backdrop-filter:blur(8px);box-shadow:0 0 14px rgba(255,208,150,.12);transition:color .2s,border-color .2s,box-shadow .2s,transform .2s}
 #sound-btn:hover,#sound-btn[aria-pressed="true"]{color:#fff0ce;border-color:#ffd59a;box-shadow:0 0 18px rgba(255,208,150,.3);transform:scale(1.05)}
+#lab-return{position:fixed;z-index:80;top:max(14px,env(safe-area-inset-top));left:14px;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 13px;border:1px solid rgba(128,221,255,.42);border-radius:6px;background:rgba(4,12,20,.86);color:#e9f8ff;text-decoration:none;font:700 10px var(--mono,monospace);letter-spacing:.08em;box-shadow:0 4px 20px rgba(0,0,0,.32);backdrop-filter:blur(8px);transition:background .18s,border-color .18s,transform .18s}
+#lab-return:hover,#lab-return:focus-visible{background:rgba(9,33,48,.96);border-color:#66e3ff;transform:translateY(-1px);outline:2px solid rgba(102,227,255,.38);outline-offset:2px}
+#lab-return .lab-return-arrow{font-size:17px;line-height:1}
 @media(max-width:640px){#workshop-corners{left:9px;right:9px;bottom:max(8px,env(safe-area-inset-bottom))}.workshop-switch{width:40px;height:40px;padding:2px}}
 @media(max-width:720px){#computer-launcher{display:none!important}}
 /* Menú de navegación activado al pulsar el holograma de Lucy. */
@@ -295,6 +298,7 @@ body.hide-native #scene{cursor:none!important}
     <footer class="computer-foot">Base local obtenida de las tarjetas y enlaces publicados en DC-LABORATORY. Lucy indicará cuando una ficha no publique una especificación o contacto propio.</footer>
   </section>
 </div>
+<a id="lab-return" href="https://dcg0.github.io/El-laboratorio/" aria-label="Volver a El Laboratorio"><span class="lab-return-arrow" aria-hidden="true">←</span><span>VOLVER A EL LABORATORIO</span></a>
 <div id="lucy-route-dialog" aria-hidden="true">
   <section class="lucy-route-card" role="dialog" aria-modal="true" aria-labelledby="lucy-route-title">
     <header class="lucy-route-head"><div><small>ASISTENTE · LUCY</small><h2 id="lucy-route-title">¿A dónde quieres ir?</h2><p>Elige una opción para continuar.</p></div><button id="lucy-route-close" type="button" aria-label="Cerrar menú">×</button></header>
