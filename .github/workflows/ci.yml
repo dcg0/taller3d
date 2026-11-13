@@ -1,0 +1,50 @@
+name: Validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static:
+    name: Validate static site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Validate HTML references and security metadata
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+          required = {
+              'referrer': 'strict-origin-when-cross-origin',
+              'content-security-policy': "frame-ancestors 'none'",
+          }
+          errors = []
+          for page in (Path('index.html'), Path('taller.html')):
+              text = page.read_text(encoding='utf-8')
+              lower = text.lower()
+              for marker, value in required.items():
+                  if marker not in lower or value.lower() not in lower:
+                      errors.append(f'{page}: missing security metadata {marker}={value}')
+              class Refs(HTMLParser):
+                  def __init__(self):
+                      super().__init__(); self.values=[]
+                  def handle_starttag(self, tag, attrs):
+                      attrs=dict(attrs)
+                      for key in ('src','href'):
+                          value=attrs.get(key)
+                          if value: self.values.append((key,value))
+              parser=Refs(); parser.feed(text)
+              for key,value in parser.values:
+                  parsed=urlparse(value)
+                  if parsed.scheme or value.startswith(('#','/','data:')): continue
+                  target=page.parent/value.split('?',1)[0].split('#',1)[0]
+                  if not target.exists(): errors.append(f'{page}: missing {key} target {value}')
+          if errors: raise SystemExit('\n'.join(errors))
+          print('Static validation passed')
+          PY
